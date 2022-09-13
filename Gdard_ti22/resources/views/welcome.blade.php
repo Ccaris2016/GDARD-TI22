@@ -1,45 +1,41 @@
-<!DOCTYPE html>
-<html lang="{{ str_replace('_', '-', app()->getLocale()) }}">
-    <head>
-        <meta charset="utf-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1">
-        <title>GENERADOR API REST</title>
-    </head>
-    <style>
-        ul {
-    list-style-type: none;
-    margin: 0;
-    padding: 0;
-    overflow: hidden;
-    background-color: #333;
-}
-li {
-    float: left;
-    border-right:1px solid #bbb;
-}
-li:last-child {
-    border-right: none;
-}
-li a {
-    display: block;
-    color: white;
-    text-align: center;
-    padding: 14px 16px;
-    text-decoration: none;
-}
-li a:hover:not(.active) {
-    background-color: #111;
-}
-    </style>
-    <body>
-        <h1 align="center">GENERADOR API REST</h1>
-        <ul>
-            <li><a href="welcome">GENERAR API</a></li>
-        </ul>
-        <select name="color" id="color">
-            <option value="r">Rojo</option>
-            <option value="a">Azul</option>
-            <option value="v">Verde</option>
-        </select>
-    </body>
+<!doctype html>
+<html lang="en">
+  <head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+
+    <title>API REST</title>
+  </head>
+  <body>
+    <h1 class="bg-primary text-white text-center">API REST DINAMICA</h1>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
+    <label for="name">NOMBRE DE LA API:</label>
+
+        <input type="text" id="name" name="name" required
+            minlength="4" maxlength="8" size="10">
+        <a href="articulos/create" class="btn btn-primary">CREAR</a>
+        <table class="table table-dark table-striped mt-4">
+    <thead>
+        <tr>
+            <th scope="col">NOMBRE DE LA API:</th>
+        </tr>
+    </thead>
+    <tbody>
+                <form method="POST">
+                <a class="btn btn-info">Editar</a>
+                @method('DELETE')
+                @csrf
+                <button type="submit" class="btn btn-danger">Borrar</button>
+                </form>
+            </td>
+        </tr>
+    </tbody>
+</table>
+
+  </body>
 </html>
