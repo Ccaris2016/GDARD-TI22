@@ -18,7 +18,7 @@
 
         <input type="text" id="name" name="name" required
             minlength="4" maxlength="8" size="10">
-        <a href="articulos/create" class="btn btn-primary">CREAR</a>
+        <a class="btn btn-primary">CREAR</a>
         <table class="table table-dark table-striped mt-4">
     <thead>
         <tr>
@@ -28,8 +28,6 @@
     <tbody>
                 <form method="POST">
                 <a class="btn btn-info">Editar</a>
-                @method('DELETE')
-                @csrf
                 <button type="submit" class="btn btn-danger">Borrar</button>
                 </form>
             </td>
