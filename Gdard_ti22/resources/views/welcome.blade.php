@@ -16,7 +16,7 @@
 
         <input type="text" id="name" name="name" required
             minlength="4" maxlength="8" size="10">
-        <a class="btn btn-primary">CREAR</a>
+        <a class="btn btn-primary" href="createApi">CREAR</a>
         <table class="table table-dark table-striped mt-4">
     <thead>
         <tr>
