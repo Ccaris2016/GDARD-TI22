@@ -2,6 +2,8 @@
 
 use Illuminate\Support\Facades\Route;
 use Illuminate\Support\Facades\Storage;
+use App\Http\Controllers\Selector;
+use Illuminate\Support\Facades\DB;
 
 /*
 |--------------------------------------------------------------------------
@@ -22,6 +24,7 @@ Route::get('/createApi/{name}', function ($name) {
     return Storage::disk('local')->put($name.'/config.php','');
 });
 
+Route::get('/selector', [Selector::class, 'listaDB']);
 /*
 Route::get('/createApi/{name}', function ($name) {
     return Storage::disk('local')->put('/apis.json',$name);
