@@ -5,6 +5,8 @@ use Illuminate\Support\Facades\Storage;
 use App\Http\Controllers\Selector;
 use Illuminate\Support\Facades\DB;
 use App\Http\Controllers\GetController;
+use App\Http\Controllers\PostController;
+
 
 
 /*
@@ -29,6 +31,8 @@ Route::get('/createApi/{name}', function ($name) {
 Route::get('/selector', [Selector::class, 'listaDB']);
 
 Route::get('/getMethod/{api}/{tabla}/{parametros}', [GetController::class, 'methodGet'])->where(['parametros'=>'.*']);
+
+Route::get('/postMethod/{api}/{tabla}/{parametros}', [PostController::class, 'methodPost'])->where(['parametros'=>'.*']);
 
 /*
 Route::get('/createApi/{name}', function ($name) {
