@@ -7,7 +7,7 @@ use Illuminate\Support\Facades\DB;
 use App\Http\Controllers\GetController;
 use App\Http\Controllers\PostController;
 use App\Http\Controllers\PutController;
-
+use App\Http\Controllers\DeleteController;
 
 
 /*
@@ -37,6 +37,7 @@ Route::get('/postMethod/{api}/{tabla}/{parametros}', [PostController::class, 'me
 
 Route::get('/putMethod/{api}/{tabla}/{columnas}/{parametros}/{condicion}/{valor}', [PutController::class, 'methodPut'])->where(['parametros'=>'.*'], ['columnas'=>'.*']);
 
+Route::get('/deleteMethod/{api}/{tabla}/{columna}/{valor}', [DeleteController::class, 'methodDelete'])->where(['columna'=>'.*']);
 
 /*
 Route::get('/createApi/{name}', function ($name) {
