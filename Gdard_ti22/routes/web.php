@@ -37,7 +37,7 @@ Route::get('/postMethod/{api}/{tabla}/{parametros}', [PostController::class, 'me
 
 Route::get('/putMethod/{api}/{tabla}/{columnas}/{parametros}/{condicion}/{valor}', [PutController::class, 'methodPut'])->where(['parametros'=>'.*'], ['columnas'=>'.*']);
 
-Route::get('/deleteMethod/{api}/{tabla}/{columna}/{valor}', [DeleteController::class, 'methodDelete'])->where(['columna'=>'.*']);
+Route::get('/deleteMethod/{api}/{tabla}/{columna}/{valor}', [DeleteController::class, 'methodDelete'])->where(['parametros'=>'.*']);
 
 /*
 Route::get('/createApi/{name}', function ($name) {
