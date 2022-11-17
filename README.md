@@ -258,6 +258,11 @@ _Developer_
 * **Cesar Caris** - *developer* 
 * **Edison Sepulveda** - *developer* 
 
+* **Rodrigo Castillo** - *developer* 
+* **Edison Sepulveda** - *developer* 
+* **Sebastian Riquelme** - *developer* 
+* **Martin Cuevas** - *developer* 
+
 ## Contributing
 
 Thank you for considering contributing to the Laravel framework! The contribution guide can be found in the [Laravel documentation](https://laravel.com/docs/contributions).
