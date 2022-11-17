@@ -257,9 +257,8 @@ _Developer_
 
 * **Cesar Caris** - *developer* 
 * **Edison Sepulveda** - *developer* 
-
 * **Rodrigo Castillo** - *developer* 
-* **Edison Sepulveda** - *developer* 
+* **Daniel Cotal** - *developer* 
 * **Sebastian Riquelme** - *developer* 
 * **Martin Cuevas** - *developer* 
 
@@ -538,8 +537,12 @@ Vaya a la URL de IP que ve en la pantalla de su CMD.
 
 _Developer_
 
-* **Cesar Cares** - *developer* 
+* **Cesar Caris** - *developer* 
 * **Edison Sepulveda** - *developer* 
+* **Rodrigo Castillo** - *developer* 
+* **Daniel Cotal** - *developer* 
+* **Sebastian Riquelme** - *developer* 
+* **Martin Cuevas** - *developer* 
 
 ## Contribuciones.
 ¡Gracias por considerar contribuir al marco de Laravel! La guía de contribución se puede encontrar en la [documentación de Laravel] (https://laravel.com/docs/contributions).
