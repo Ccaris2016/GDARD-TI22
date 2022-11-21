@@ -3,8 +3,13 @@
 namespace App\Http\Controllers;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\DB;
+use App\Http\Controllers\AuthController;
+
 class GetController extends Controller
 {
+    public function verif(){
+        return 'a';
+    }
     public function methodGet($api,$tabla,$parametro)
     {
         function parameters($parametros){
@@ -14,7 +19,6 @@ class GetController extends Controller
                 $cont++;
                 if (sizeof($parametros) == $cont){
                     $columns = $columns.$parametro;
-
                 }
                 else{
                     $columns = $columns.$parametro.',';

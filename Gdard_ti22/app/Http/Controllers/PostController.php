@@ -8,8 +8,7 @@ use Illuminate\Support\Facades\DB;
 
 class PostController extends Controller
 {
-  public function methodPost($api,$tabla,$parametro)
-   {
+public function methodPost($api,$tabla,$parametro){
         function parameters($parametros){
             $columns = '';
             $cont = 0;
@@ -22,7 +21,6 @@ class PostController extends Controller
                     else{
                         $columns = $columns.$parametro;
                     }
-
                 }
                 else{
                     if(is_string($parametro)){
@@ -34,14 +32,11 @@ class PostController extends Controller
                 }
             }
             return $columns;
-        }
-       
+        }  
         $parametro = explode("/",$parametro);
         $columns = parameters($parametro);
         $query = DB::insert('insert into '.$tabla.' values ('.$columns.');');
-        return $query;
-    
+        return $query;   
     } 
-
 }
 

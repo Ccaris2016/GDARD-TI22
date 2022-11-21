@@ -20,7 +20,7 @@
         <table class="table table-dark table-striped mt-4">
     <thead>
         <tr>
-            <th scope="col">NOMBRE DE LA API:</th>
+            <th scope="col">HOLA TE DORMISTE PA:</th>
         </tr>
     </thead>
     <tbody>

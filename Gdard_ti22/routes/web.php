@@ -10,6 +10,7 @@ use App\Http\Controllers\PutController;
 use App\Http\Controllers\DeleteController;
 
 
+
 /*
 |--------------------------------------------------------------------------
 | Web Routes
@@ -29,7 +30,7 @@ Route::get('/createApi/{name}', function ($name) {
     return Storage::disk('local')->put($name.'/config.php','');
 });
 
-Route::get('/selector', [Selector::class, 'listaDB']);
+Route::get('/selector', [Selector::class, 'verif']);
 
 Route::get('/getMethod/{api}/{tabla}/{parametros}', [GetController::class, 'methodGet'])->where(['parametros'=>'.*']);
 
@@ -39,8 +40,3 @@ Route::get('/putMethod/{api}/{tabla}/{columnas}/{parametros}/{condicion}/{valor}
 
 Route::get('/deleteMethod/{api}/{tabla}/{columna}/{valor}', [DeleteController::class, 'methodDelete'])->where(['parametros'=>'.*']);
 
-/*
-Route::get('/createApi/{name}', function ($name) {
-    return Storage::disk('local')->put('/apis.json',$name);
-});
-*/
