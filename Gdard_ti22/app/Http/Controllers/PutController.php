@@ -7,7 +7,7 @@ use Illuminate\Http\Request;
 
 class PutController extends Controller
 {
-    public function methodPut($api, $tabla, $columnas, $parametro, $condicion, $valor){
+    public function methodPut(Request $request,$api, $tabla, $columnas, $parametro, $condicion, $valor){
         function parameters($parametros, $columnas){
             $datos = '';
             $cont = 0;
@@ -32,10 +32,21 @@ class PutController extends Controller
                 }
                 return $datos;
             }
-        $parametro = explode("/",$parametro);
-        $columnas = explode("/", $columnas);
-        $datos = parameters($parametro,$columnas);
-        $query = DB::update('update '.$tabla.' set ' .$datos.' where '.$condicion.'='.$valor);
-        return $query;
+            function put($tabla, $columnas, $parametro, $condicion, $valor){
+                $parametro = explode("/",$parametro);
+                $columnas = explode("/", $columnas);
+                $datos = parameters($parametro,$columnas);
+                $query = DB::update('update '.$tabla.' set ' .$datos.' where '.$condicion.'='.$valor);
+                return $query;
+            }
+            $vToken = DB::select('Select remember_token from users');
+            $rToken = $request->input('token');
+            $aToken = (array) $rToken;
+            foreach ($vToken as $token) {
+                if ($token->remember_token == $aToken[0]) {
+                    return put($tabla, $columnas, $parametro, $condicion, $valor);
+                }
+            }
+            return 'Token inválido';
     }
 }
