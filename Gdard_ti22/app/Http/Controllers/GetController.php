@@ -3,14 +3,9 @@
 namespace App\Http\Controllers;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\DB;
-use App\Http\Controllers\AuthController;
-
 class GetController extends Controller
 {
-    public function verif(){
-        return 'a';
-    }
-    public function methodGet($api,$tabla,$parametro)
+    public function methodGet(Request $requestt,$api,$tabla,$parametro)
     {
         function parameters($parametros){
             $columns = '';
@@ -26,9 +21,21 @@ class GetController extends Controller
             }
             return $columns;
         }
-        $parametro = explode("/",$parametro);
-        $columns = parameters($parametro);
-        $query = DB::select('select '.$columns.' from '.$tabla);
-        return $query;
-    }
+        function getcontroll($tabla,$parametro){
+            $parametro = explode("/",$parametro);
+            $columns = parameters($parametro);
+            $query = DB::select('select '.$columns.' from '.$tabla);
+            return $query;
+        }
+
+        $vToken = DB::select('Select remember_token from users');
+        $rToken = $requestt->input('token');
+        $aToken = (array) $rToken;
+        foreach ($vToken as $token) {
+            if ($token->remember_token == $aToken[0]) {
+                return getcontroll ($tabla,$parametro);
+            }
+        }
+        return 'Token inválido';
+        }
 }
